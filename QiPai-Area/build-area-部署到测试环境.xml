@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="测试环境-Area" basedir=".">
+
+	<!--配置文件目录-->
+	<property name="server_csv" value="${basedir}/csv"/>
+	<!--jar包文件目录-->
+	<property name="server_jar" value="${basedir}/lib"/>
+	<!--游戏发布目录-->
+	<property name="publish_game" value="D:/yaowanwork/qipaiwork/QiPai-Deploy/publish/171_ceshi/S9998"/>
+	<property name="run_path" value="/ryzc/services/qipai-backend/publish/171_ceshi/S9998"/>
+	
+	<target name="update">
+		<exec dir="${basedir}" executable="svn" vmlauncher="true">
+			<arg line="update"/>
+		</exec>
+	</target>
+	
+	<target name="package_jar" depends="update">
+	    <ant antfile="build-ShareDao-Common-MessageCode.xml" inheritall="false" inheritrefs="false" target="pack_QiPai-Common"/>
+		<ant antfile="build-server.xml" inheritall="false" inheritrefs="false" target="jar"/>
+      	<echo>打包ShareDao Common MessageCode完成</echo>
+	</target>
+
+	<!--Copy文件到发布目录-->
+	<target name="copy_to_publish_game" depends="package_jar">
+		
+		<exec dir="${publish_game}" executable="svn" vmlauncher="true">
+			<arg line="update"/>
+		</exec>
+		
+		<copy todir="${publish_game}/server/configuration/csv">
+			<fileset dir="${server_csv}/">
+				<include name="*.csv" />
+			</fileset>
+		</copy>
+		
+		<copy todir="${publish_game}/server/jar">
+			<fileset dir="${server_jar}/">
+				<include name="qipai-*.jar" />
+			</fileset>
+		</copy>
+			
+		<echo> Copy successfully</echo>	
+	</target>
+	
+	
+	<target name="commit_publish_game" depends="copy_to_publish_game">
+		<exec dir="${publish_game}/server/jar" executable="svn" vmlauncher="true">
+			<arg line="add *"/>
+		</exec>
+		
+		<exec dir="${publish_game}/server/configuration/csv" executable="svn" vmlauncher="true">
+			<arg line="add *"/>
+		</exec>
+		
+		<exec dir="${publish_game}/server/jar" executable="svn" vmlauncher="true">
+			<arg line="commit --message &quot;&gt;版本发布 &quot;&gt;"/>
+		</exec>
+		<exec dir="${publish_game}/server/configuration/csv" executable="svn" vmlauncher="true">
+			<arg line="commit --message &quot;&gt;版本发布 &quot;&gt;"/>
+		</exec>
+	</target>
+
+	<target name="部署游戏>>地区服" depends ="commit_publish_game">
+		<!--
+		    <sshexec host="118.89.35.171" port="20163" username="root" password="ad4ae7eedb76cf5cf9d431c689f7de11" command="sh ${run_path}/scripts/build-jar.sh" trust="true" /> 
+		-->
+		    <sshexec host="118.89.35.171" port="20163" username="root" password="ad4ae7eedb76cf5cf9d431c689f7de11" command="sh ${run_path}/scripts/restart-game-server.sh &amp;&amp; tail -fn500  ${run_path}/servers/S9998/run.log" trust="true" /> 
+		</target>
+
+	<target name="重启地区服">
+	    <sshexec host="118.89.35.171" port="20163" username="root" password="ad4ae7eedb76cf5cf9d431c689f7de11" command="sh ${run_path}/scripts/restart-game-server.sh &amp;&amp; tail -fn500  ${run_path}/servers/S9998/run.log" trust="true" /> 
+	</target>
+	
+</project>

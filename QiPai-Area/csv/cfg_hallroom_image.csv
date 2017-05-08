@@ -1,0 +1,7 @@
+GameType:int,Picture:string,Words:string
+1,GameBg1,GameTitle1
+2,GameBg2,GameTitle2
+3,GameBg3,GameTitle3
+4,GameBg3,GameTitle4
+5,GameBg1,GameTitle5
+9,GameBg2,GameTitle6

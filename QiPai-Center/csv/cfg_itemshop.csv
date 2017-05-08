@@ -1,0 +1,7 @@
+ItemOrder:int,ItemName:string,ItemPrice:string,ItemId:int,ItemQuantity:int,ItemInfo:string,Bonus:string,BonusItem:int,ItemIcon:string
+1,补签卡,3_50000,1001001,1,补签卡每天限用一次,0,0,Daoju_BQ_01
+2,请人卡,3_5000,1002001,2,踢得就是你,0,0,Daoju_TR_01
+3,鸡蛋,3_1000,1003001,3,你打得真臭,0,0,Daoju_JD_01
+4,拖鞋,3_3000,1003002,4,吃我一记大拖鞋,0,0,Daoju_TX_01
+5,鲜花,3_1000,1003003,5,你打得真好,0,0,Daoju_XH_01
+6,炸弹,3_5000,1003004,6,送你一颗雷,0,0,Daoju_ZD_01

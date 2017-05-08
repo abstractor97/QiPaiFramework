@@ -1,0 +1,2 @@
+Id:int,GoldLowerLimit:int,ReceiveTime:int,ReceiveCD:string,ReceiveQuantity:string
+1,3200,2,0|0,4000|4000

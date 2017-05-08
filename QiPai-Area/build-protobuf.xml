@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir=".">
+	<!--客户端协议文件目录-->
+	<property name="client_proto" value="D:/yaowanwork/qipaiwork/qipai-designer/ProtoFiles/ZhaoTong/game"/>
+	<!--服务端协议文件目录-->
+	<property name="server_proto" value="D:/yaowanwork/qipaiwork/qipai-backend/trunk/ProtocolQiPai/protoFiles"/>
+	<!--protoc.bat-->
+	<property name="server_proto_bat" value="D:/yaowanwork/qipaiwork/qipai-backend/trunk/ProtocolQiPai/protoc-messagecode.bat"/>
+
+	<target name="update_client_proto">
+		<exec dir="${client_proto}" executable="svn" vmlauncher="true">
+			<arg line="update" />
+		</exec>
+	</target>
+
+	<target name="update_server_proto">
+		<exec dir="${server_proto}" executable="svn" vmlauncher="true">
+			<arg line="update"/>
+		</exec>
+	</target>
+
+	<!--copy proto到客户端目录-->
+	<target name="copy_to_client_proto" depends="update_client_proto,update_server_proto">
+
+		<copy todir="${client_proto}">
+			<fileset dir="${server_proto}/game">
+				<include name="*.proto" />
+			</fileset>
+		</copy>
+		<echo> Copy successfully</echo>
+	</target>
+	
+
+	<target name="①生成JAVA类 proto >> java_class" depends="update_server_proto">
+		<exec command="cmd">
+			<arg value="/k start ${server_proto_bat}"/>
+		</exec>
+	</target>
+	<target name="②提交服务端proto文件">
+		<exec dir="${server_proto}" executable="svn" vmlauncher="true">
+			<arg line="commit --message &quot;&gt;提交proto文件 &quot;&gt;"/>
+		</exec>
+	</target>
+	
+	<target name="③提交客户端proto文件" depends="copy_to_client_proto">
+		<exec dir="${client_proto}" executable="svn" vmlauncher="true">
+			<arg line="add *"/>
+		</exec>
+		<exec dir="${client_proto}" executable="svn" vmlauncher="true">
+			<arg line="commit --message &quot;&gt;提交proto文件 &quot;&gt;"/>
+		</exec>
+		<echo>操作完成</echo>
+	</target>
+</project>

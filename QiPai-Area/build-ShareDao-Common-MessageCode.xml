@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir=".">
+
+	<target name="pack_QiPai-ShareDao" description="打包QiPai-ShareDao">
+		<exec dir="../QiPai-ShareDao" executable="svn" vmlauncher="true">
+			<arg line="update" />
+		</exec>
+		<ant antfile="build-server.xml" dir="../QiPai-ShareDao" inheritall="false" inheritrefs="false" target="jar" />
+	</target>
+	<target name="pack_QiPai-MessageCode" depends="pack_QiPai-ShareDao" description="打包QiPai-MessageCode">
+		<exec dir="../QiPai-MessageCode" executable="svn" vmlauncher="true">
+			<arg line="update" />
+		</exec>
+		<ant antfile="build-server.xml" dir="../QiPai-MessageCode" inheritall="false" inheritrefs="false" target="jar" />
+	</target>
+	<target name="pack_QiPai-Common" depends="pack_QiPai-MessageCode" description="打包QiPai-Common">
+		<exec dir="../QiPai-Common" executable="svn" vmlauncher="true">
+			<arg line="update" />
+		</exec>
+		<ant antfile="build-server.xml" dir="../QiPai-Common" inheritall="false" inheritrefs="false" target="jar" />
+	</target>
+</project>

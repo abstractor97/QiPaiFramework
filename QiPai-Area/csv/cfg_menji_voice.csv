@@ -1,0 +1,13 @@
+BehaviourId:int,Behaviour:string,VoiceM:string,VoiceW:string
+1,jiazhu,Audio_addpay_1_M|Audio_addpay_2_M,Audio_addpay_1_W|Audio_addpay_2_W
+2,bipai,Audio_compare_1_M,Audio_compare_1_W
+3,genzhu,Audio_followpay_1_M|Audio_followpay_2_M,Audio_followpay_1_W|Audio_followpay_2_W
+4,qipai,Audio_giveup_1_M|Audio_giveup_2_M,Audio_giveup_1_W|Audio_giveup_2_W
+5,kanpai,Audio_lookcard_1_M,Audio_lookcard_1_W
+6,menpai,Audio_foldcard_1_M,Audio_foldcard_1_W
+7,danpai,Audio_DanPai_M,Audio_DanPai_W
+8,duizi ,Audio_DuiZi_M,Audio_DuiZi_W
+9,shunzi,Audio_ShunZi_M,Audio_ShunZi_W
+10,tonghua,Audio_TongHua_M,Audio_TongHua_W
+11,tonghuashun,Audio_TongHuaShun_M,Audio_TongHuaShun_W
+12,baozi,Audio_BaoZi_M,Audio_BaoZi_W

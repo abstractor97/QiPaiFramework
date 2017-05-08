@@ -1,0 +1,9 @@
+ID:int,Gender:int,IconName:string
+1,1,headportrait_01
+2,0,headportrait_02
+3,0,headportrait_03
+4,1,headportrait_04
+5,0,touxiang_1
+6,1,touxiang_2
+7,1,touxiang_3
+8,0,touxiang_4

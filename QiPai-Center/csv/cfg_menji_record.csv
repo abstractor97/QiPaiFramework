@@ -1,0 +1,7 @@
+RecordId:int,RecordSeg:string,RecordName:string,CareerRecord:bool,WeekRecord:bool
+1,WinRecord,胜场、胜率,1,1
+2,Baozi,豹子,1,1
+3,Tonghuashun,同花顺,1,1
+4,Tonghua,同花,1,1
+5,Shunzi,顺子,1,0
+6,TopGold,最多赢注,0,1

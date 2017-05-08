@@ -1,0 +1,4 @@
+ItemOrder:int,ItemName:string,ItemPrice:string,ItemQuantity:int,BonusInfo:string,BonusItem:int,Bonus:int
+1,30000金币,1_3|2_30,30000,(加赠3万金币),2001001,30000
+2,60000金币,1_6|2_60,60000,(加赠6万金币),2001001,60000
+3,120000金币,1_12|2_120,120000,(加赠12万金币),2001001,120000

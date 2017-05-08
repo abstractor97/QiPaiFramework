@@ -1,0 +1,4 @@
+RoomId:int,AiLevel:string,AiGold:string,AiDiamond:string,AiWeekWinStats:string,AiWeekTotalStats:string,AiCareerWinStats:string,AiCareerTotalStats:string
+1,5_10,5000_50000,0_20,25_27,50_55,100_110,200_220
+2,10_20,20000_150000,30_100,25_27,50_55,100_110,200_220
+3,20_30,120000_500000,50_200,25_27,50_55,100_110,200_220

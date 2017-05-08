@@ -1,0 +1,8 @@
+RecordId:int,RecordSeg:string,RecordName:string,CareerRecord:bool,WeekRecord:bool
+1,WinRecord,胜率、胜场,1,1
+2,LordWinRecord,地主胜率,1,1
+3,FarmerWinRecord,农民胜率,1,1
+4,Bomb,炸弹次数,1,1
+5,Kingbomb,王炸次数,1,1
+6,TopMultiple,最高倍率,1,1
+7,TopGold,最多赢注,1,1

@@ -1,0 +1,5 @@
+RoomID:int,PotOdds:int,EnterLowerLimit:int,EnterUpperLimit:int,TaxPerGame:int,MaxFanShu:int,TurnDuration:int,Turn2Duration:int,ActionDuration:int,OTPunishment:int,ExchangeLottery:int
+1,100,3200,-1,120,10000,8,8,6,2,0
+2,1000,16000,-1,800,10000,8,8,6,2,0
+3,1000,16000,-1,800,10000,8,8,6,2,100
+4,10000,160000,-1,8000,10000,8,8,6,2,100

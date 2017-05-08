@@ -1,0 +1,4 @@
+Id:int,AscriptionGameId:int,RoomID:int,pump:int
+1,1,1,500
+2,1,2,500
+3,1,3,500

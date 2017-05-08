@@ -1,0 +1,2 @@
+id:int	name:varchar	explain:varchar	start_time:string	end_time:string	reward_expire_time:string	type:int	picture_url:varchar
+1	充值送豪礼	累计充值达到指定额度可以获得丰富大礼包	2016-11-29 20:40:40	2016-11-30 20:40:40	2016-12-1 20:40:40	1	0

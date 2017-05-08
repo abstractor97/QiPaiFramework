@@ -1,0 +1,5 @@
+ShareId:int,ShareType:int,ShareTitle:string,ShareInfo:string,ShareUrl:string,ShareIcon:string
+1,1,昭通棋牌,我在亲友房，约你来开局哦！【进去开局】,http://qipai.allfungame.com/mobile/index?open_with=share,https://zy-qipai.allrace.com/activilyimage/tubiao/GameIcon.png
+2,2,昭通棋牌,<%s>房号:【%s】，%s，%s倍，%s局【点击进入】,http://qipai.allfungame.com/mobile/index?open_with=invite&room=%s,https://zy-qipai.allrace.com/activilyimage/tubiao/GameIcon.png
+3,1,昭通棋牌,昭通人的棋牌！赶快来赢话费！推荐码：%s【进去开局】,http://qipai.allfungame.com/mobile/index?open_with=share,https://zy-qipai.allrace.com/activilyimage/tubiao/GameIcon.png
+4,1,昭通棋牌,昭通人的棋牌！赶快来赢话费！推荐码：%s【进去开局】,http://qipai.allfungame.com/mobile/index?open_with=share,https://zy-qipai.allrace.com/activilyimage/tubiao/GameIcon.png

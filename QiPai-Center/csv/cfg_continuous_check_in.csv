@@ -1,0 +1,6 @@
+ID:int,ConsecutiveDays:int,RewardItem:string,Icon:string,OffIcon:string
+1,2,2010001_5000,1,1
+2,7,2010001_10000,1,1
+3,14,2010001_15000,1,1
+4,20,2010001_20000,1,1
+5,25,2010001_25000,1,1

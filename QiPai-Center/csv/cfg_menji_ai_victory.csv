@@ -1,0 +1,5 @@
+VictoryId:int,VictoryProbability:int
+1,10000
+2,5000
+3,2000
+4,1000

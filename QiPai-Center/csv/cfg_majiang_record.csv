@@ -1,0 +1,9 @@
+RecordId:int,RecordSeg:string,RecordName:string,CareerRecord:bool,WeekRecord:bool
+1,WinRecord,胜场、胜率,1,1
+3,Firstblood,头彩数/率,1,1
+5,Qingyise,清一色,1,1
+7,Qiaoqidui,巧七对,1,1
+9,Gangshanghua,杠上花,1,1
+11,Daduizi,大对子,1,1
+13,TopMultiple,最高番数,1,1
+15,TopGold,最多赢注,1,1

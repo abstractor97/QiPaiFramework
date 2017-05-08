@@ -1,0 +1,5 @@
+CharacterId:int,ChaName:string,ChaInfo:string,Icon:string,Gender:int,UnlockType:int,UnlockMethod:int,ChaPrice:string,ModelId:string,ActIdMenjiWupai:string
+1,阿星,棋牌天赋过人的超新星，自信能取得赌神的称号。,all_act_guzhuangnan_dapai_xiuxiandaiji,0,1,1,0_0,act_guzhuangnan,act_wupai_guzhuangnan
+2,绮梦,来自昭通的神秘美女，牌技和美貌一样出类拔萃。,all_qipaonv_xiuxiandaiji,1,1,1,0_0,act_qipaonv,act_wupai_qipaonv
+3,光哥,世界赌王洪光，拥有出众的牌技和惊人的运气。,all_xiandainan_xiuxiandaiji,0,1,15,2_100,act_xiandainan,act_wupai_xiandainan
+4,冰冰,自幼跟着父亲混迹各大牌场，将各类棋牌的精髓都学到了手。,all_tunvlang_xiuxiandaiji,1,1,15,2_100,act_tunvlang,act_wupai_tunvlang

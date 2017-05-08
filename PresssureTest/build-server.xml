@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="压测" basedir="." default="jar">
+	<!--定义源文件路径，其中的value换成location也行，使用value
+	的时候，${src.dir}得到的就是${basedir}/src这个值，如果使用location，
+	得到的是src.dir这个目录的绝对路径--> 
+	<property name="src.dir" value="${basedir}/src" />
+	<property name="lib.dir" value="${basedir}/lib" />
+	<property name="buildclass.dir" value="${basedir}/bin" />
+	<property name="jarfile" value="${basedir}/lib/pressure-test.jar" />
+	<pathconvert property="libs.project" pathsep=" ">
+		<mapper>
+			<chainedmapper>
+				<!-- remove absolute path -->
+				<flattenmapper />
+				<!-- add lib/ prefix -->
+				<globmapper from="*" to="lib/*" />
+			</chainedmapper>
+		</mapper>
+		<path>
+			<!-- lib.home contains all jar files, in several subdirectories -->
+			<fileset dir="${lib.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+		</path>
+	</pathconvert>
+
+	<target name="remove">
+		<delete dir="${buildclass.dir}"/>
+		<delete file="${jarfile}"/>
+	</target>
+	<target name="build" depends="remove">
+		<echo message="开始构建目录" />
+		<mkdir dir="${buildclass.dir}" />
+		<echo message="构建目录结束" />
+		<echo message="开始编译" />
+		<path id="classpath">
+			<fileset dir="${lib.dir}" includes="*.jar" />
+		</path>
+		<javac debug="true" source="1.7" srcdir="${src.dir}" destdir="${buildclass.dir}" encoding="UTF-8" includeantruntime="on">
+			<compilerarg value="-Xlint:deprecation" />
+			<classpath refid="classpath" />
+		</javac>
+		<copy todir="${buildclass.dir}" failonerror="false">
+            <fileset dir="${src.dir}" includes="*.xml, *.properties"/>
+        </copy>
+		<echo message="编译结束" />
+	</target>                                 
+	<target name="jar" depends="build">
+		<delete dir="${basedir}/bin/client"/>
+		<delete dir="${basedir}/bin/test"/>
+		<echo message="开始打包JAR" />
+		<jar destfile="${jarfile}" basedir="${buildclass.dir}">
+			<manifest>
+				<!--不需要指定主类-->
+				<attribute name="Manifest-Version" value="1.0" />
+				<attribute name="Main-Class" value="com.yaowan.game.qipai.test.Runner" />
+				<attribute name="Class-Path" value="${libs.project}" />
+			</manifest>
+		</jar>
+		<echo message="打包结束" />
+		<!--<delete dir="${basedir}/log" />-->  
+	</target>
+</project>

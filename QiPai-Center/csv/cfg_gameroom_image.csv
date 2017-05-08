@@ -1,0 +1,17 @@
+GameType:int,RoomLv:int,Picture:string,Words:string,Title:string
+1,1,menji-chuji,qiaojiayaoshan,menjifanjinhua
+1,2,menji_zhongji,xiaocaoba,menjifanjinhua
+1,3,meijijuandiji,jigongshandaxiagu,menjifanjinhua
+1,4,meijijuangaoji,meijititle4,menjifanjinhua
+2,1,doudizhu-chuji,doushaguanguzhen,zhaotongdoudizhu
+2,2,doudizhugaojibi,huanglianhe,zhaotongdoudizhu
+2,3,doudizhudijijuan,xibudaxiagu,zhaotongdoudizhu
+2,4,doudizhugaojijuan,doudizhugaoji,zhaotongdoudizhu
+3,1,majiang-chuji,qinggongting,zhaotongmajiang
+3,2,majiang-zhongji,wanghaigongyuan,zhaotongmajiang
+3,3,majidijijuan,dashanbao,zhaotongmajiang
+3,4,majigaojijuan,majigaoji,zhaotongmajiang
+4,1,majiang-chuji,zhengxiong_1,zhengxiongmajiang
+4,2,majiang-zhongji,zhengxiong_2,zhengxiongmajiang
+4,3,majidijijuan,zhengxiong_3,zhengxiongmajiang
+4,4,majigaojijuan,zhengxiong_4,zhengxiongmajiang

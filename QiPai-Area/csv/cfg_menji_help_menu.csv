@@ -1,0 +1,8 @@
+CardTypeId:int,CardsDisplay:string,CardTypeInfoA:string,CardTypeInfoB:string
+1,0|1|2,豹子,最大
+2,15|19|23,同花顺,大于同花
+3,26|30|38,同花,大于顺子
+4,19|22|24,顺子,大于对子
+5,6|7|9,对子,大于单张
+6,3|34|25,单张,最小
+7,5|10|19,特殊,有豹最大

@@ -1,0 +1,2 @@
+ID:int,ShareId:string,DailyBindingLimit:int,SponsorAward:string,RecipientReward:string
+1,3|4,99999999,2010001|1000,2010001|5000

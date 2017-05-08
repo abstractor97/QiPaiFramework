@@ -1,0 +1,4 @@
+ItemOrder:int,ItemName:string,ItemPrice:string,ItemInfo:string,Bonus:string,BonusItem:int,VipDuration:int,ItemIcon:string
+1,VIP欢享周末卡,1_6,购买VIP3天使用权,0,0,72,100001
+2,VIP周卡,1_12,购买VIP7天使用权,0,0,168,100001
+3,VIP月卡,1_30,购买VIP30天使用权,2_300000,2001001,720,100001

@@ -1,0 +1,3 @@
+AiId:int,BasicFoldrate:int,BasicCheckrate:int,BasicCombatrate:int,BasicRaiserate:int,FrFix1:int,CrFix1:int,ComrFix1:int,RrFix1:int,FrFix2:int,CrFix2:int,ComrFix2:int,RrFix2:int,FrFix3:int,CrFix3:int,ComrFix3:int,RrFix3:int,FrFix4:int,CrFix4:int,ComrFix4:int,RrFix4:int,FrFix5:int,CrFix5:int,ComrFix5:int,RrFix5:int,BasicCheckPoint:int
+10001,0,7000,0,0,0,0,0,0,500,500,500,125,100,250,50,100,250,500,250,250,200,500,200,100,12
+10002,0,0,0,0,0,0,0,0,500,3000,500,125,100,250,50,100,250,100,250,250,200,500,200,100,12
